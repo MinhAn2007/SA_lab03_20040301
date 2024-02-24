@@ -10,13 +10,10 @@ public class ParseXML {
 
     public static Document parseXMLFile(String xmlFilePath) {
         try {
-            // Create a DocumentBuilder
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
 
-            // Parse the XML file to create a Document object
             Document document = builder.parse(new File(xmlFilePath));
-
             return document;
         } catch (Exception e) {
             e.printStackTrace();

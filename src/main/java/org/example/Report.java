@@ -1,10 +1,8 @@
 package org.example;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -19,36 +17,30 @@ public class Report {
                 Element packageElement = (Element) packagesNodeList.item(i);
                 String packageName = packageElement.getAttribute("name");
 
-                // Write package name to the report
                 out.println("Package: " + packageName);
-
-                // Check if package has error or statistics available
                 NodeList errorNodes = packageElement.getElementsByTagName("error");
                 NodeList statsNodes = packageElement.getElementsByTagName("Stats");
 
                 if (errorNodes.getLength() > 0) {
-                    // Write error message to the report
                     Element errorElement = (Element) errorNodes.item(0);
                     String errorMessage = errorElement.getTextContent();
                     out.println("\tError: " + errorMessage);
                 } else if (statsNodes.getLength() > 0) {
-                    // Write package statistics to the report
                     Element statsElement = (Element) statsNodes.item(0);
                     appendStatsToReport(statsElement, out);
                 } else {
                     out.println("\tNo statistics available for this package.");
                 }
 
-                // Extract and write class source files to the report
                 NodeList classNodes = packageElement.getElementsByTagName("Class");
                 for (int j = 0; j < classNodes.getLength(); j++) {
                     Element classElement = (Element) classNodes.item(j);
                     String classSourceFile = classElement.getAttribute("sourceFile");
-                    out.println("\tClass Source File: " + classSourceFile);
+                    out.println("\t- Class Source File: " + classSourceFile);
                 }
+                out.println();
             }
 
-            System.out.println("Report generated successfully.");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -82,7 +74,7 @@ public class Report {
         if (nodeList.getLength() > 0) {
             return nodeList.item(0).getTextContent();
         }
-        return "N/A"; // Or throw an exception depending on your requirements
+        return "**";
     }
 
 }
