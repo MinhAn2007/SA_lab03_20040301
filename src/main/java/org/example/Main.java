@@ -1,32 +1,52 @@
 package org.example;
 
+import javax.swing.*;
 import java.io.*;
 
 import jdepend.xmlui.JDepend;
+import org.w3c.dom.Element;
 
 public class Main {
 
     public static void main(String[] args) {
-        try {
-            // Create a PrintWriter to write the output to an XML file
-            PrintWriter out = new PrintWriter(new FileOutputStream("jdepend-results.xml"));
+        // Create a file chooser
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Choose Project Directory");
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 
-            // Create a JDepend instance with XMLUI mode
-            JDepend jdepend = new JDepend(out);
+        // Show the file chooser dialog
+        int result = fileChooser.showOpenDialog(null);
 
-            // Add the directory of the project you want to analyze
-            // Change the directory path as per your project
-            jdepend.addDirectory("D:\\An\\Y4S2\\KienTruc\\SA_lab03_2004031");
+        if (result == JFileChooser.APPROVE_OPTION) {
+            // Get the selected directory
+            File selectedDirectory = fileChooser.getSelectedFile();
 
-            // Analyze the project
-            jdepend.analyze();
+            try {
+                // Create a PrintWriter to write the output to an XML file
+                PrintWriter out = new PrintWriter(new FileOutputStream("jdepend-results.xml"));
 
-            // Close the PrintWriter
-            out.close();
+                // Create a JDepend instance with XMLUI mode
+                JDepend jdepend = new JDepend(out);
 
-            System.out.println("JDepend analysis completed. Results written to jdepend-results.xml");
-        } catch (IOException e) {
-            e.printStackTrace();
+                // Add the selected directory for analysis
+                jdepend.addDirectory(selectedDirectory.getAbsolutePath());
+
+                // Analyze the project
+                jdepend.analyze();
+
+                // Close the PrintWriter
+                out.close();
+
+                // Convert XML to TXT
+                Element rootElement = ParseXML.parseXMLFile("jdepend-results.xml").getDocumentElement();
+                Report.generateReport(rootElement, "jdepend.txt");
+
+                System.out.println("JDepend analysis completed. Results written to jdepend-results.xml and jdepend.txt");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("No Project Directory selected");
         }
     }
 }
