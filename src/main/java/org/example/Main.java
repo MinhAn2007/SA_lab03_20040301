@@ -18,15 +18,18 @@ public class Main {
         if (result == JFileChooser.APPROVE_OPTION) {
             File selectedDirectory = fileChooser.getSelectedFile();
             try {
-                PrintWriter out = new PrintWriter(new FileOutputStream("jdepend-results.xml"));
+                File outputFileXML = new File(System.getProperty("user.home") + File.separator + "Downloads" + File.separator + "output.xml");
+                PrintWriter out = new PrintWriter(new FileOutputStream(outputFileXML.getAbsolutePath()));
                 JDepend jdepend = new JDepend(out);
                 jdepend.addDirectory(selectedDirectory.getAbsolutePath());
                 jdepend.analyze();
                 out.close();
-                Element rootElement = ParseXML.parseXMLFile("jdepend-results.xml").getDocumentElement();
-                Report.generateReport(rootElement, "jdepend.txt");
 
-                System.out.println("JDepend analysis completed. Results written to jdepend-results.xml and jdepend.txt");
+                File outputFileTXT = new File(System.getProperty("user.home") + File.separator + "Downloads" + File.separator + "output.txt");
+                Element rootElement = ParseXML.parseXMLFile(outputFileXML.getAbsolutePath()).getDocumentElement();
+                Report.generateReport(rootElement, outputFileTXT.getAbsolutePath());
+
+                JOptionPane.showMessageDialog(null, "Report saved to: " + outputFileTXT.getAbsolutePath(), "Success", JOptionPane.INFORMATION_MESSAGE);
             } catch (IOException e) {
                 e.printStackTrace();
             }
