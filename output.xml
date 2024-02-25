@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<JDepend>
+    <Packages>
+
+        <Package name="com.example">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>3</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="App.java">
+                    com.example.App
+                </Class>
+                <Class sourceFile="AppTest.java">
+                    com.example.AppTest
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>org.junit</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.example.app">
+            <Stats>
+                <TotalClasses>2</TotalClasses>
+                <ConcreteClasses>2</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>0</Ca>
+                <Ce>6</Ce>
+                <A>0</A>
+                <I>1</I>
+                <D>0</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="CustomersOrderAge.java">
+                    com.example.app.CustomersOrderAge
+                </Class>
+                <Class sourceFile="FindByID.java">
+                    com.example.app.FindByID
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.example.dao</Package>
+                <Package>java.io</Package>
+                <Package>java.lang</Package>
+                <Package>java.lang.invoke</Package>
+                <Package>java.util</Package>
+                <Package>org.bson.types</Package>
+            </DependsUpon>
+
+            <UsedBy>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.example.dao">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>13</Ce>
+                <A>0</A>
+                <I>0.93</I>
+                <D>0.07</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="SaleDao.java">
+                    com.example.dao.SaleDao
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.example.db</Package>
+                <Package>com.example.entity</Package>
+                <Package>com.google.gson</Package>
+                <Package>com.mongodb</Package>
+                <Package>com.mongodb.client</Package>
+                <Package>com.mongodb.client.model</Package>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+                <Package>org.bson</Package>
+                <Package>org.bson.codecs.configuration</Package>
+                <Package>org.bson.codecs.pojo</Package>
+                <Package>org.bson.conversions</Package>
+                <Package>org.bson.types</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.example.app</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.example.db">
+            <Stats>
+                <TotalClasses>1</TotalClasses>
+                <ConcreteClasses>1</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>2</Ce>
+                <A>0</A>
+                <I>0.67</I>
+                <D>0.33</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Connection.java">
+                    com.example.db.Connection
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>com.mongodb.client</Package>
+                <Package>java.lang</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.example.dao</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.example.entity">
+            <Stats>
+                <TotalClasses>3</TotalClasses>
+                <ConcreteClasses>3</ConcreteClasses>
+                <AbstractClasses>0</AbstractClasses>
+                <Ca>1</Ca>
+                <Ce>3</Ce>
+                <A>0</A>
+                <I>0.75</I>
+                <D>0.25</D>
+                <V>1</V>
+            </Stats>
+
+            <AbstractClasses>
+            </AbstractClasses>
+
+            <ConcreteClasses>
+                <Class sourceFile="Customer.java">
+                    com.example.entity.Customer
+                </Class>
+                <Class sourceFile="Item.java">
+                    com.example.entity.Item
+                </Class>
+                <Class sourceFile="Sale.java">
+                    com.example.entity.Sale
+                </Class>
+            </ConcreteClasses>
+
+            <DependsUpon>
+                <Package>java.lang</Package>
+                <Package>java.util</Package>
+                <Package>org.bson.types</Package>
+            </DependsUpon>
+
+            <UsedBy>
+                <Package>com.example.dao</Package>
+            </UsedBy>
+        </Package>
+
+        <Package name="com.google.gson">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.mongodb">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.mongodb.client">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="com.mongodb.client.model">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.io">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.lang">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.lang.invoke">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="java.util">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.bson">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.bson.codecs.configuration">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.bson.codecs.pojo">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.bson.conversions">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.bson.types">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+
+        <Package name="org.junit">
+            <error>No stats available: package referenced, but not analyzed.</error>
+        </Package>
+    </Packages>
+
+    <Cycles>
+    </Cycles>
+</JDepend>

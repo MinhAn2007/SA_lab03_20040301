@@ -1,0 +1,201 @@
+Package: com.example
+	Stats:
+		Total Classes: 2
+		Concrete Classes: 2
+		Abstract Classes: 0
+		Ca: 0
+		Ce: 3
+		A: 0
+		I: 1
+		D: 0
+		V: 1
+	- Class Source File: App.java
+	- Class Source File: AppTest.java
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: com.example.app
+	Stats:
+		Total Classes: 2
+		Concrete Classes: 2
+		Abstract Classes: 0
+		Ca: 0
+		Ce: 6
+		A: 0
+		I: 1
+		D: 0
+		V: 1
+	- Class Source File: CustomersOrderAge.java
+	- Class Source File: FindByID.java
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: com.example.dao
+	Stats:
+		Total Classes: 1
+		Concrete Classes: 1
+		Abstract Classes: 0
+		Ca: 1
+		Ce: 13
+		A: 0
+		I: 0.93
+		D: 0.07
+		V: 1
+	- Class Source File: SaleDao.java
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: com.example.db
+	Stats:
+		Total Classes: 1
+		Concrete Classes: 1
+		Abstract Classes: 0
+		Ca: 1
+		Ce: 2
+		A: 0
+		I: 0.67
+		D: 0.33
+		V: 1
+	- Class Source File: Connection.java
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: com.example.entity
+	Stats:
+		Total Classes: 3
+		Concrete Classes: 3
+		Abstract Classes: 0
+		Ca: 1
+		Ce: 3
+		A: 0
+		I: 0.75
+		D: 0.25
+		V: 1
+	- Class Source File: Customer.java
+	- Class Source File: Item.java
+	- Class Source File: Sale.java
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: 
+	No statistics available for this package.
+
+Package: com.google.gson
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: com.mongodb
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: com.mongodb.client
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: com.mongodb.client.model
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: java.io
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: java.lang
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: java.lang.invoke
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: java.util
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: org.bson
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: org.bson.codecs.configuration
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: org.bson.codecs.pojo
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: org.bson.conversions
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: org.bson.types
+	Error: No stats available: package referenced, but not analyzed.
+
+Package: org.junit
+	Error: No stats available: package referenced, but not analyzed.
+
