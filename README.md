@@ -81,7 +81,7 @@ Sau khi kiểm tra thành công, chương trình sẽ hiển thị một thông 
 
 ![img_6.png](img/img_6.png)
 
-Ở file output.xml sẽ hiển thị ra các thồng tin được parse từ file output.xml
+Ở file output.txt sẽ hiển thị ra các thồng tin được parse từ file output.xml
 
 ![img_7.png](img/img_7.png)
 
@@ -132,22 +132,36 @@ Các báo cáo sẽ có những dạng sau :
 Đối với file txt
 
 Package: com.example
+
 Stats:
 Total Classes: 2
+
 Concrete Classes: 2
+
 Abstract Classes: 0
+
 Ca: 0
+
 Ce: 3
+
 A: 0
+
 I: 1
+
 D: 0
+
 V: 1
+
 - Class Source File: App.java
+- 
 - Class Source File: AppTest.java
 
 Package:
+
 No statistics available for this package.
+
 Package: com.mongodb.client.model
+
 Error: No stats available: package referenced, but not analyzed.
 
 Ngoài ra ở bạn có thể phân tích được chỉ số WMC và LCOM ở file MetricsFilterTest
